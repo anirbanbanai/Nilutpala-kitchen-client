@@ -1,6 +1,7 @@
 import { useLoaderData } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Bttnn from './Bttnn';
 
 const ShopByCatagory = () => {
     const data = useLoaderData();
@@ -24,6 +25,7 @@ const ShopByCatagory = () => {
                             <img className='rounded-2xl' src={m.img} alt="" />
                            <h2 className='text-2xl font-semibold'> {m.description}</h2>
                            <p>${m.price}</p>
+                           <Bttnn>Buy Now</Bttnn>
                             </div>)
                     }
                    </div>
@@ -35,6 +37,7 @@ const ShopByCatagory = () => {
                             <img className='rounded-2xl' src={m.img} alt="" />
                            <h2 className='text-2xl font-semibold'> {m.description}</h2>
                            <p>${m.price}</p>
+                           <Bttnn>Buy Now</Bttnn>
                             </div>)
                     }
                    </div>
@@ -46,6 +49,7 @@ const ShopByCatagory = () => {
                             <img className='rounded-2xl' src={m.img} alt="" />
                            <h2 className='text-2xl font-semibold'> {m.description}</h2>
                            <p>${m.price}</p>
+                           <Bttnn>Buy Now</Bttnn>
                             </div>)
                     }
                    </div>

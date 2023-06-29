@@ -11,6 +11,9 @@ import ShopByCatagory from './Components/ShopByCatagory';
 import Login from './Accunt/Login';
 import Register from './Accunt/Register';
 import AuthProvider from './Auth/AuthProvider';
+import DashBoard from './DashBoard/DashBoard';
+import AddClass from './DashBoard/Admin/AddClass';
+import UpdateItem from './DashBoard/Admin/UpdateItem';
 
 const router = createBrowserRouter([
   {
@@ -33,9 +36,24 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
+      },
+      {
+        path:"/dash/update",
+        element:<UpdateItem></UpdateItem>
       }
     ]
   },
+  {
+    path:"/dash",
+    element:<DashBoard></DashBoard>,
+    children:[
+      {
+        path:"/dash/addclass",
+        element:<AddClass></AddClass>
+      },
+      
+    ]
+  }
   
 ]);
 

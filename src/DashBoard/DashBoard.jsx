@@ -1,26 +1,38 @@
+import { Link, Outlet } from "react-router-dom";
 
 
 const DashBoard = () => {
     return (
         <div>
-            <div className="drawer lg:drawer-open">
-                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
-                    {/* Page content here */}
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+        <h3 className="text-4xl font-semibold text-center mb-5 mt-5">This is dashboard</h3>
 
-                </div>
-                <div className="drawer-side">
-                    <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
-                        {/* Sidebar content here */}
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
-                    </ul>
+        <div className="flex w-full">
+            <div className="flex justify-center  flex-grow card bg-yellow-300 rounded-box place-items-center p-3">
 
-                </div>
+                        <Link className="text-2xl mr-5 mb-2 font-semibold" to="/dash/addclass" >Add Item</Link>
+                        <Link className="text-2xl mr-5 font-semibold" ></Link>   
+
+            </div>
+            <div className="divider divider-horizontal">And</div>
+            <div className="flex flex-grow card bg-base-300 rounded-box place-items-center">
+                <Link to='/' className="text-xl font-semibold mb-2">Home</Link>
+                <Link className="text-xl font-semibold" to='/shopbycatagory'>Shop</Link>
             </div>
         </div>
+        <div>
+
+
+            <div>
+                <Outlet></Outlet>
+            </div>
+
+
+            <div className="divider divide-x-8"></div>
+
+
+
+        </div>
+    </div>
     );
 };
 
