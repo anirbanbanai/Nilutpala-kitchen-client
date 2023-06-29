@@ -22,7 +22,7 @@ const Register = () => {
         <div className="pt-24 ">
             <h2 className="text-5xl font-bold text-center">Register Now</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="w-2/4 mx-auto nnn3 p-10">
-                <div className="flex gap-4">
+                <div className="md:flex gap-4">
                     <div className="form-control w-full ">
                         <label className="label">
                             <span className="label-text text-xl font-semibold">Name</span>

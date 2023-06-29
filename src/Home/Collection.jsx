@@ -4,7 +4,7 @@ import SubCollection from "./SubCollection";
 const Collection = () => {
     const [collection, setCollection] = useState()
     useEffect(()=>{
-        fetch("http://localhost:5000/nilufood")
+        fetch("https://my-kitchen-server-anirbanbanai.vercel.app/nilufood")
         .then(res=> res.json())
         .then(data=>
             setCollection(data)

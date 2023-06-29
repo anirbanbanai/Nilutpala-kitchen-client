@@ -14,6 +14,7 @@ import AuthProvider from './Auth/AuthProvider';
 import DashBoard from './DashBoard/DashBoard';
 import AddClass from './DashBoard/Admin/AddClass';
 import UpdateItem from './DashBoard/Admin/UpdateItem';
+import AllItem from './DashBoard/Admin/AllItem';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       {
         path:"/shopbycatagory",
         element:<ShopByCatagory></ShopByCatagory>,
-        loader: ()=> fetch("http://localhost:5000/nilufood")
+        loader: ()=> fetch("https://my-kitchen-server-anirbanbanai.vercel.app/nilufood")
       },
       {
         path:"/login",
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         path:"/dash/addclass",
         element:<AddClass></AddClass>
       },
+      {
+        path:'/dash/allitem',
+        element:<AllItem></AllItem>
+      }
       
     ]
   }

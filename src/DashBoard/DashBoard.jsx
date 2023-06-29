@@ -10,7 +10,7 @@ const DashBoard = () => {
             <div className="flex justify-center  flex-grow card bg-yellow-300 rounded-box place-items-center p-3">
 
                         <Link className="text-2xl mr-5 mb-2 font-semibold" to="/dash/addclass" >Add Item</Link>
-                        <Link className="text-2xl mr-5 font-semibold" ></Link>   
+                        <Link className="text-2xl mr-5 mb-2 font-semibold" to="/dash/allitem" >All Item</Link> 
 
             </div>
             <div className="divider divider-horizontal">And</div>
