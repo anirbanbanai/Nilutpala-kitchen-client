@@ -13,16 +13,17 @@ const ShopByCatagory = () => {
         <div className='pt-28'>
              <Tabs>
                 <TabList>
-                    <Tab>F1</Tab>
-                    <Tab>F2</Tab>
-                    <Tab>F3</Tab>
+                    <Tab>Biriyani</Tab>
+                    <Tab>Pulaw</Tab>
+                    <Tab>Joise</Tab>
+                    <Tab>Doi</Tab>
                 </TabList>
 
                 <TabPanel>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-center'>
                     {
                         dataF1.map(m=><div className='nnn5 p-6' key={m._id}>
-                            <img className='rounded-2xl' src={m.img} alt="" />
+                            <img className="rounded-2xl w-full  " src={m.img} alt="" />
                            <h2 className='text-2xl font-semibold'> {m.description}</h2>
                            <p>${m.price}</p>
                            <Bttnn>Buy Now</Bttnn>

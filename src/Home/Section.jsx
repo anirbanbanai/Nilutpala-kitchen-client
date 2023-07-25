@@ -25,10 +25,10 @@ const Section = () => {
                     className="mySwiper nnn3 m-8"
                 >
                     <SwiperSlide className="p-10 ">
-                        <img className="h-[400px] mt-5 mx-auto rounded-2xl" src={img1} alt="" />
+                        <img className="md:h-[400px] mt-5 mx-auto rounded-2xl" src={img1} alt="" />
                     </SwiperSlide>
                     <SwiperSlide className="p-10 ">
-                        <img className="h-[400px] mt-5 mx-auto rounded-2xl" src={img2} alt="" />
+                        <img className="md:h-[400px] mt-5 mx-auto rounded-2xl" src={img2} alt="" />
                     </SwiperSlide>
                     <SwiperSlide className="p-10 ">
                         <img className="h-[400px] mt-5 mx-auto rounded-2xl" src={img3} alt="" />

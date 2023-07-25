@@ -21,7 +21,7 @@ const Register = () => {
     return (
         <div className="pt-24 ">
             <h2 className="text-5xl font-bold text-center">Register Now</h2>
-            <form onSubmit={handleSubmit(onSubmit)} className="w-2/4 mx-auto nnn3 p-10">
+            <form onSubmit={handleSubmit(onSubmit)} className="w-[90%] md:w-2/4 mx-auto nnn3 p-10">
                 <div className="md:flex gap-4">
                     <div className="form-control w-full ">
                         <label className="label">
@@ -64,7 +64,7 @@ const Register = () => {
                     <Bttnn className="mx-auto">Submir</Bttnn>
                 </div>
                 <h3 className="text-green-500 text-center">{success}</h3>
-                <h3 className="text-center">Already have an accunt? <Link to='/login'>Login</Link></h3>
+                <h3 className="text-center">Already have an accunt? <Link className="text-red-500" to='/login'>Login</Link></h3>
             </form>
         </div>
     );

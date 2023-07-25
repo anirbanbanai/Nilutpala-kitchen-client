@@ -5,17 +5,19 @@ import { useContext } from 'react';
 import { AuthContext } from '../Auth/AuthProvider';
 
 const Navbar = () => {
-    const {user, logOut} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
-    const HandleLogOut = ()=>{
+    const HandleLogOut = () => {
         logOut()
     }
 
     const navItem = <>
         <li><Link t='/' className="text-2xl font-semibold text-red-500">Home</Link></li>
         <li><Link to='/shopbycatagory' className="text-2xl font-semibold text-red-500">Shop</Link></li>
-
-        {user && <li><Link to="/dash/addclass" className="text-2xl font-semibold  bg-blue-500">DashBoard</Link></li>}
+        <li><Link  to="/dash/addclass" className="text-2xl font-semibold text-red-500">Dashboard</Link></li>
+        <li><Link   className="text-2xl font-semibold text-red-500">Favorite</Link></li>
+        <li><Link   className="text-2xl font-semibold text-red-500">My Shop</Link></li>
+   
 
     </>
     return (
@@ -25,7 +27,6 @@ const Navbar = () => {
                     <div className="dropdown">
                         <label tabIndex={0} className="lg:hidden">
                             <button>
-
                                 <HiMenuAlt1 className="text-5xl mr-6" />
                             </button>
 
@@ -45,44 +46,44 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
 
-                    {!user ?<Link to="/login">
-                    <button className="btn2" type="button">
-                        <strong>Login</strong>
-                        <div id="container-stars">
-                            <div id="stars"></div>
-                        </div>
+                    {!user ? <Link to="/login">
+                        <button className="btn2" type="button">
+                            <strong>Login</strong>
+                            <div id="container-stars">
+                                <div id="stars"></div>
+                            </div>
 
-                        <div id="glow">
-                            <div className="circle"></div>
-                            <div className="circle"></div>
-                        </div>
-                    </button>
-                    </Link> : 
+                            <div id="glow">
+                                <div className="circle"></div>
+                                <div className="circle"></div>
+                            </div>
+                        </button>
+                    </Link> :
 
-                    <button onClick={HandleLogOut} className="btn2" type="button">
-                    <strong>LogOut</strong>
-                    <div id="container-stars">
-                        <div id="stars"></div>
-                    </div>
+                        <button onClick={HandleLogOut} className="btn2" type="button">
+                            <strong>LogOut</strong>
+                            <div id="container-stars">
+                                <div id="stars"></div>
+                            </div>
 
-                    <div id="glow">
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                    </div>
-                </button>
+                            <div id="glow">
+                                <div className="circle"></div>
+                                <div className="circle"></div>
+                            </div>
+                        </button>
                     }
-                    <Link to="/register">
-                    <button className="btn2" type="button">
-                        <strong>Register</strong>
-                        <div id="container-stars">
-                            <div id="stars"></div>
-                        </div>
+                    <Link className='hidden md:flex' to="/register">
+                        <button className="btn2  " type="button">
+                            <strong>Register</strong>
+                            <div id="container-stars">
+                                <div id="stars"></div>
+                            </div>
 
-                        <div id="glow">
-                            <div className="circle"></div>
-                            <div className="circle"></div>
-                        </div>
-                    </button>
+                            <div id="glow">
+                                <div className="circle"></div>
+                                <div className="circle"></div>
+                            </div>
+                        </button>
                     </Link>
                 </div>
             </div>
