@@ -16,6 +16,7 @@ import AddClass from './DashBoard/Admin/AddClass';
 import UpdateItem from './DashBoard/Admin/UpdateItem';
 import AllItem from './DashBoard/Admin/AllItem';
 import MyShop from './Components/MyShop';
+import MyFavorite from './Components/MyFavorite';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path:"/dash/update",
         element:<UpdateItem></UpdateItem>
+      },
+      {
+        path:"/fv",
+        element:<MyFavorite></MyFavorite>
       }
     ]
   },
