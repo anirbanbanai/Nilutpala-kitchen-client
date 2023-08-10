@@ -15,8 +15,8 @@ const Navbar = () => {
         <li><Link t='/' className="text-2xl font-semibold text-red-500">Home</Link></li>
         <li><Link to='/shopbycatagory' className="text-2xl font-semibold text-red-500">Shop</Link></li>
         <li><Link  to="/dash/addclass" className="text-2xl font-semibold text-red-500">Dashboard</Link></li>
-        <li><Link   className="text-2xl font-semibold text-red-500">Favorite</Link></li>
-        <li><Link   className="text-2xl font-semibold text-red-500">My Shop</Link></li>
+        <li><Link to="/myshop"  className="text-2xl font-semibold text-red-500">Favorite</Link></li>
+        <li><Link  to="/myshop" className="text-2xl font-semibold text-red-500">My Shop</Link></li>
    
 
     </>

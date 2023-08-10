@@ -15,6 +15,7 @@ import DashBoard from './DashBoard/DashBoard';
 import AddClass from './DashBoard/Admin/AddClass';
 import UpdateItem from './DashBoard/Admin/UpdateItem';
 import AllItem from './DashBoard/Admin/AllItem';
+import MyShop from './Components/MyShop';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
+      },
+      {
+        path:"/myshop",
+        element:<MyShop></MyShop>
       },
       {
         path:"/dash/update",
